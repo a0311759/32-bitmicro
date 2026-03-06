@@ -1,0 +1,17 @@
+; Compute 5^5 = 3125
+
+LOAD R1, 00000000000000000000000000000101   ; base = 5
+LOAD R2, 00000000000000000000000000000101   ; exponent = 5
+LOAD R3, 00000000000000000000000000000001   ; result = 1
+
+LOOP:
+MUL R3, R1                                 ; ACC1 = R3 * R1
+MOV R3, ACC1                               ; update result in R3
+
+SUB R2, 00000000000000000000000000000001    ; ACC1 = R2 - 1
+MOV R2, ACC1                               ; update counter in R2
+
+JNZ LOOP                                   ; loop until R2 == 0
+
+PRINT R3                                   ; final result = 3125
+EXIT

@@ -1,0 +1,19 @@
+; Load five binary numbers into registers
+LOAD R1, 00000000000000000000000000000101   ; 5
+LOAD R2, 00000000000000000000000000001010   ; 10
+LOAD R3, 00000000000000000000000000000011   ; 3
+LOAD R4, 00000000000000000000000000000100   ; 4
+LOAD R5, 00000000000000000000000000000111   ; 7
+
+; Perform arithmetic operations, results go into ACC1
+ADD R1, R2        ; ACC1 = R1 + R2 = 15
+SUB R3, R4        ; ACC1 = R3 - R4 = -1 (two’s complement)
+MUL R1, R5        ; ACC1 = R1 * R5 = 35
+DIV R2, R3        ; ACC1 = R2 / R3 = 3
+MOD R5, R4        ; ACC1 = R5 % R4 = 3
+CMP R2, R1        ; ACC1 = R2 - R1 = 5
+
+; Print results from ACC1 after each operation
+PRINT ACC1
+
+EXIT
