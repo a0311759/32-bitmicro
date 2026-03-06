@@ -19,3 +19,13 @@ This project demonstrates instruction parsing, register operations, and executio
 
 ```bash
 python3 controller.py
+
+
+
+# sumloop.testa
+
+run sumloop.testa
+
+LOAD R1, 101
+LOAD R2, 11
+ADD R1, R2
